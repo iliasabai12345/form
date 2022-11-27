@@ -13,7 +13,7 @@
 		<form>
 			<div class="omrs-input-group">
 				<label class="omrs-input-underlined">
-					<input required id="sku">
+					<input required id="sku" disabled>
 					<span class="omrs-input-label">Код товара</span>
 				</label>
 				<div id="check-in-firebase" style="font-size: 12px;color: red"></div>
@@ -405,6 +405,7 @@
             });
             books = [...new Set(books)]
             counter.innerText = books.length.toString();
+            sku.disabled = false;
         });
     }
 
