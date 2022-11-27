@@ -133,6 +133,12 @@
 			</div>
 			<div class="omrs-input-group">
 				<label class="omrs-input-underlined">
+					<input required id="present_house_description_kz">
+					<span class="omrs-input-label">Издательство описание на казахском</span>
+				</label>
+			</div>
+			<div class="omrs-input-group">
+				<label class="omrs-input-underlined">
 					<input required id="img_author_url">
 					<span class="omrs-input-label">Фото автора</span>
 				</label>
@@ -256,6 +262,7 @@
     const img_author_url = document.getElementById('img_author_url');
     const present_house = document.getElementById('present_house');
     const present_house_description = document.getElementById('present_house_description');
+    const present_house_description_kz = document.getElementById('present_house_description_kz');
     const author_info_ru = document.getElementById('author_info_ru');
     const author_info_kz = document.getElementById('author_info_kz');
     const description_ru = document.getElementById('description_ru');
@@ -294,6 +301,7 @@
         addBook.img_author_url = img_author_url.value.trim() || null;
         addBook.present_house = present_house.value.trim() || null;
         addBook.present_house_description = present_house_description.value.trim() || null;
+        addBook.present_house_description_kz = present_house_description_kz.value.trim() || null;
         addBook.author_info_ru = author_info_ru.value.trim() || null;
         addBook.author_info_kz = author_info_kz.value.trim() || null;
         addBook.description_ru = description_ru.value.trim() || null;
@@ -316,9 +324,12 @@
 
     async function addBookToFirestore() {
         try {
-            await setDoc(doc(db, "books", sku.value), addBook, { merge: true });
+            await setDoc(doc(db, "books", sku.value), addBook, {merge: true});
+            alert('Успешно отправлено');
+            clear();
         } catch (e) {
             console.error("Error adding document: ", e);
+            alert('Ошибка при отправке');
         }
     }
 
@@ -347,7 +358,31 @@
             addBook.catalog_name_ru = null;
             addBook.catalog_name_kz = null;
         }
+    }
 
+    function clear() {
+        title.value = null;
+        price.value = null;
+        old_price.value = null;
+        sku.value = null;
+        count.value = null;
+        author.value = null;
+        series.value = null;
+        img_url.value = null;
+        img_author_url.value = null;
+        present_house.value = null;
+        present_house_description.value = null;
+        present_house_description_kz.value = null;
+        author_info_ru.value = null;
+        author_info_kz.value = null;
+        description_ru.value = null;
+        description_kz.value = null;
+        height.value = null;
+        width.value = null;
+        ISBN.value = null;
+        language.value = null;
+        page_count.value = null;
+        date.value = null;
     }
 
 </script>
