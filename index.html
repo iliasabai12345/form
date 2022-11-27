@@ -109,7 +109,7 @@
 			</div>
 			<div class="omrs-input-group">
 				<label class="omrs-input-underlined">
-					<input required id="thickness ">
+					<input required id="thickness">
 					<span class="omrs-input-label">Детали(Толщина издания)</span>
 				</label>
 			</div>
@@ -274,6 +274,7 @@
     const language = document.getElementById('language');
     const page_count = document.getElementById('page_count');
     const date = document.getElementById('date');
+    const thickness = document.getElementById('thickness');
 
     const catalog = document.getElementById('catalog');
     const chapter = document.getElementById('chapter');
@@ -313,7 +314,9 @@
             {name: 'ISBN', name_kz: 'ISBN', value: ISBN.value.trim() || null},
             {name: 'Язык', name_kz: 'Тіл', value: language.value.trim() || null},
             {name: 'Количество страниц', name_kz: 'Беттер саны', value: page_count.value.trim() || null},
-            {name: 'Дата выхода', name_kz: 'Шығу жылы', value: date.value.trim() || null}
+            {name: 'Дата выхода', name_kz: 'Шығу жылы', value: date.value.trim() || null},
+            {name: 'Толщина', name_kz: 'Қалыңдығы', value: thickness.value.trim() || null}
+
         ]
 
         addBook.catalog = catalog.value.trim() || null;
