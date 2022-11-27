@@ -395,15 +395,15 @@
 
     const counter = document.getElementById('counter');
     const checkFirebase = document.getElementById('check-in-firebase')
-    const books = [];
+    let books = [];
 
     async function getBooks() {
         const q = query(collection(db, "books"));
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                books.push(doc.data());
+                books.push(doc.data().sku);
             });
-            console.log(books.length);
+            books = [...new Set(books)]
             counter.innerText = books.length.toString();
         });
     }
@@ -412,7 +412,7 @@
 
     sku.addEventListener('input', (event) => {
         const val = event.target.value;
-        const check = !!books.find(res => res.sku === val.trim());
+        const check = !!books.find(res => res === val.trim());
         if (check) {
             checkFirebase.innerText = 'Такая книга уже есть в базе';
         } else {
