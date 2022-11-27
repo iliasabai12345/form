@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <h4 class="title">основная информация</h4>
+        <form>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="title">
+                        <span class="omrs-input-label">Название</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="author">
+                        <span class="omrs-input-label">Автор</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="price">
+                        <span class="omrs-input-label">Цена</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="old_price">
+                        <span class="omrs-input-label">Старая цена</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="series">
+                        <span class="omrs-input-label">Серия</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="description_ru">
+                        <span class="omrs-input-label">Описание товара</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="img_url">
+                        <span class="omrs-input-label">Фото книги</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="description_kz">
+                        <span class="omrs-input-label">Описание на казахском</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="count">
+                        <span class="omrs-input-label">Количество</span>
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <h4 class="title">Второстепенная информация</h4>
+        <form>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="ISBN">
+                        <span class="omrs-input-label">Детали(ISBN)</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="height">
+                        <span class="omrs-input-label">Детали(Высота издания)</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="width">
+                        <span class="omrs-input-label">Детали(Ширина издания)</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="page_count">
+                        <span class="omrs-input-label">Детали(Количество страниц)</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="language">
+                        <span class="omrs-input-label">Детали(Язык)</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="date">
+                        <span class="omrs-input-label">Детали(Дата выхода)</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="thickness ">
+                        <span class="omrs-input-label">Детали(Толщина издания)</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="sku">
+                        <span class="omrs-input-label">Код товара</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="present_house">
+                        <span class="omrs-input-label">Издательство</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="present_house_description">
+                        <span class="omrs-input-label">Издательство описание</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="img_author_url">
+                        <span class="omrs-input-label">Фото автора</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="author_info_ru">
+                        <span class="omrs-input-label">Информация об авторе</span>
+                </label>
+            </div>
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required id="author_info_kz">
+                        <span class="omrs-input-label">Информация об авторе на казахском</span>
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <h4 class="title">Разделы и жанры</h4>
+        <div style="margin-bottom: 1rem">Категория</div>
+        <select id="category">
+            <option value="artistic_literature">Художественная литература | Көркем әдебиет</option>
+            <option value="children_literature">Детская литература | Балалар әдебиеті</option>
+            <option value="education_textbooks">Образование. Учебники | Білім. Оқулықтар</option>
+            <option value="popular_psychology">Популярная психология | Танымал психология</option>
+            <option value="business_literature">Деловая литература | Іскерлік әдебиет</option>
+            <option value="home_family_leisure">Дом. Семья. Досуг | Үй. Отбасы. Бос уақыт</option>
+            <option value="esotericism_magic_astrology">Эзотерика. Магия. Астрология | Эзотерика. Сиқыр. Астрология
+            </option>
+            <option value="medicine_and_health">Медицина и здоровье | Медицина және денсаулық</option>
+            <option value="science">Наука | Ғылым</option>
+            <option value="journalism">Публицистика | Журналистика</option>
+            <option value="gift_editions">Подарочные издания | Сыйлық басылымдары</option>
+            <option value="gift_editions">Компьютеры и Интернет | Компьютерлер және Интернет</option>
+            <option value="literature_of_Kazakhstan">Литература Казахстана | Қазақстан Әдебиеті</option>
+            <option value="legal_literature">Юридическая литература | Құқықтық әдебиет</option>
+            <option value="technical_literature">Техническая литература | Техникалық әдебиеттер</option>
+            <option value="art_culture">Искусство. Культура | Өнер. Мәдениет</option>
+            <option value="sport_tourism_hobby">Спорт. Туризм. Хобби | Спорт. Туризм. Хобби</option>
+            <option value="encyclopedias_references">Энциклопедии. Справочники | Энциклопедиялар. Анықтамалықтар
+            </option>
+            <option value="cars">Автомобили | Автомобильдер</option>
+            <option value="secrets_sensations_catastrophes">Тайны, сенсации, катастрофы | Жұмбақтар, сенсациялар,
+                апаттар
+            </option>
+            <option value="accessories_calendars_postcards">Аксессуары, календари, открытки | Аксессуарлар, күнтізбелер,
+                ашық хаттар
+            </option>
+        </select>
+
+        <div style="margin-bottom: 1rem;margin-top: 1rem">Каталог</div>
+        <select id="catalog">
+            <option>Нет</option>
+            <option value="200_pages">Меньше 200 страниц | 200 беттен аз</option>
+            <option value="antidepressant_books">Книги антидепресанты | Антидепрессанттар кітаптары</option>
+            <option value="think_about_life">Если хочешь поразмыщлять о жизни | Егер сіз өмір туралы ашуланғыңыз келсе
+            </option>
+            <option value="to_parents">Незаменимые книги для родителей | Ата-аналар үшін таптырмас кітаптар</option>
+            <option value="understand_yourself">Понять себя и всех вокруг | Өзіңізді және айналаңыздағылардың бәрін
+                түсініңіз
+            </option>
+        </select>
+        <div style="margin-bottom: 1rem;margin-top: 1rem">Разделы</div>
+        <select id="chapter">
+            <option value="">Все</option>
+            <option value="newest">Книжные новинки | Кітап жаңалықтары</option>
+            <option value="popular_psychology">Популярная психология 2022 | Танымал психология 2022</option>
+            <option value="recipe">Ни один рецепт не будет потерян! | Ешқандай рецепт жоғалмайды!</option>
+            <option value="investments">Все об инвестициях | Барлығы инвестиция туралы</option>
+            <option value="prose_chosen">Проза, которую выбирают | Таңдалған Проза</option>
+        </select>
+        <div style="margin-top: 1rem">
+            <button class="submit_button" id="button">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import {getAnalytics} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+    import {
+    getFirestore,
+    addDoc,
+    collection,
+    setDoc,
+    doc
+} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyCBwHt6AV1erEuh0jW2Wh6lcSYL4__kM7Y",
+    authDomain: "book-store-c7ead.firebaseapp.com",
+    projectId: "book-store-c7ead",
+    storageBucket: "book-store-c7ead.appspot.com",
+    messagingSenderId: "579105885737",
+    appId: "1:579105885737:web:8988e9ba7fe5ea33ed1638",
+    measurementId: "G-0G32YBC8E4"
+};
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+
+    const button = document.getElementById('button')
+
+    const title = document.getElementById('title');
+    const price = document.getElementById('price');
+    const old_price = document.getElementById('old_price');
+    const sku = document.getElementById('sku');
+    const count = document.getElementById('count');
+    const author = document.getElementById('author');
+    const series = document.getElementById('series');
+    const img_url = document.getElementById('img_url');
+    const img_author_url = document.getElementById('img_author_url');
+    const present_house = document.getElementById('present_house');
+    const present_house_description = document.getElementById('present_house_description');
+    const author_info_ru = document.getElementById('author_info_ru');
+    const author_info_kz = document.getElementById('author_info_kz');
+    const description_ru = document.getElementById('description_ru');
+    const description_kz = document.getElementById('description_kz');
+
+    const height = document.getElementById('height');
+    const width = document.getElementById('width');
+    const ISBN = document.getElementById('ISBN');
+    const language = document.getElementById('language');
+    const page_count = document.getElementById('page_count');
+    const date = document.getElementById('date');
+
+    const catalog = document.getElementById('catalog');
+    const chapter = document.getElementById('chapter');
+    const category = document.getElementById('category');
+
+
+    const addBook = {}
+    button.addEventListener('click', () => {
+    writer();
+    chapterGetInfo();
+    addBookToFirestore();
+    console.log(addBook)
+})
+
+
+    function writer() {
+    addBook.title = title.value.trim();
+    addBook.price = price.value.trim();
+    addBook.old_price = old_price.value.trim() || null;
+    addBook.sku = sku.value.trim();
+    addBook.count = count.value.trim();
+    addBook.author = author.value.trim();
+    addBook.series = series.value.trim();
+    addBook.img_url = img_url.value;
+    addBook.img_author_url = img_author_url.value.trim() || null;
+    addBook.present_house = present_house.value.trim();
+    addBook.present_house_description = present_house_description.value.trim();
+    addBook.author_info_ru = author_info_ru.value.trim();
+    addBook.author_info_kz = author_info_kz.value.trim() || null;
+    addBook.description_ru = description_ru.value.trim();
+    addBook.description_kz = description_kz.value.trim() || null;
+
+    addBook.details = [
+{name: 'Высота', name_kz: 'Биіктігі', value: height.value.trim},
+{name: 'Ширина', name_kz: 'Ені', value: width.value.trim || null},
+{name: 'ISBN', name_kz: 'ISBN', value: ISBN.value.trim},
+{name: 'Язык', name_kz: 'Тіл', value: language.value.trim},
+{name: 'Количество страниц', name_kz: 'Беттер саны', value: page_count.value.trim},
+{name: 'Дата выхода', name_kz: 'Шығу жылы', value: date.value.trim}
+    ]
+
+    addBook.catalog = catalog.value.trim() || null;
+    addBook.chapter = chapter.value.trim() || null;
+    addBook.category = category.value.trim();
+}
+
+
+    async function addBookToFirestore() {
+    try {
+    await setDoc(doc(db, "books", sku.value), addBook, {merge: true});
+} catch (e) {
+    console.error("Error adding document: ", e);
+}
+}
+
+    function chapterGetInfo() {
+    const chapterInfo = chapter.options[chapter.selectedIndex].text;
+    const categoryInfo = category.options[category.selectedIndex].text;
+    const catalogInfo = catalog.options[catalog.selectedIndex].text;
+    const chapterInfoEdited = chapterInfo.split(' | ');
+    const categoryInfoEdited = categoryInfo.split(' | ');
+    const catalogInfoEdited = catalogInfo.split(' | ');
+
+    addBook.category_name_ru = categoryInfoEdited[0];
+    addBook.category_name_kz = categoryInfoEdited[1];
+
+    if (chapterInfoEdited.length === 2) {
+    addBook.chapter_name_ru = chapterInfoEdited[0];
+    addBook.chapter_name_kz = chapterInfoEdited[1];
+} else {
+    addBook.chapter_name_ru = null;
+    addBook.chapter_name_kz = null;
+}
+    if (catalogInfoEdited.length === 2) {
+    addBook.catalog_name_ru = catalogInfoEdited[0];
+    addBook.catalog_name_kz = catalogInfoEdited[1];
+} else {
+    addBook.catalog_name_ru = null;
+    addBook.catalog_name_kz = null;
+}
+
+}
+
+</script>
+
+</body>
+</html>
