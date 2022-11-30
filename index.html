@@ -300,7 +300,7 @@
         addBook.price = price.value.trim() || null;
         addBook.old_price = old_price.value.trim() || null;
         addBook.sku = sku.value.trim() || null;
-        addBook.count = count.value.trim() || null;
+        addBook.count = Number(count.value.trim()) || null;
         addBook.author = author.value.trim() || null;
         addBook.series = series.value.trim() || null;
         addBook.img_url = img_url.value || null;
@@ -396,18 +396,22 @@
     const counter = document.getElementById('counter');
     const checkFirebase = document.getElementById('check-in-firebase')
     let books = [];
+    let booksInfo = [];
     const toJson = []; // конвертация в json
     async function getBooks() {
         const q = query(collection(db, "books"));
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
+            booksInfo = [];
             querySnapshot.forEach((doc) => {
                 books.push(doc.data().sku);
+                booksInfo.push(doc.data());
                 toJson.push(doc.data());//добавляем в массив для конвертаций
             });
             books = [...new Set(books)]
             counter.innerText = books.length.toString();
             sku.disabled = false;
             console.log(JSON.stringify({books: toJson})) // с консольи копируем json
+            console.log(booksInfo)
         });
     }
 
